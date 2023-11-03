@@ -10,9 +10,8 @@ export class AppComponent {
 
 
   async sendRequest() {
-    let res = await fetch('http://localhost:8000')
-    let data = res
-    console.log(data)
+    let res = await fetch('https://localhost:8000').then((res) => res.json())
+    console.log(res)
   }
 
 
