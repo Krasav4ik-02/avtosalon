@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'site';
+
+
+  async sendRequest() {
+    let res = await fetch('https://localhost:8000').then((res) => res.json())
+    console.log(res)
+  }
+
+
 }
